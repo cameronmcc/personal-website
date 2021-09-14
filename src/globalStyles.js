@@ -10,7 +10,6 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export const Container = styled.div`
-font-family: 'Space Grotesk', sans-serif;
 z-index: 1;
 width: 100%;
 max-width: 1300px;
