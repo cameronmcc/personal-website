@@ -10,4 +10,7 @@ export const homeObjOne = {
   headline: "Welcome to my Personal Portfolio",
   lightText: true,
   topLine: "Cameron McCloskey",
+  img: require("../../images/svg1.svg").default,
+  alt: "Image",
+  start: "",
 };
