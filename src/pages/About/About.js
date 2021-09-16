@@ -1,11 +1,10 @@
 import React from "react";
-import { ObjTwo } from "./Data";
-import { InfoSection } from "../../components";
+import { ObjTwo } from "../../Data/Data";
 
 const About = () => {
   return (
     <>
-      <InfoSection {...ObjTwo} />
+      <h1>About</h1>
     </>
   );
 };
