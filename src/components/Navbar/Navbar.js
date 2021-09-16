@@ -21,6 +21,8 @@ const Navbar = () => {
 
   const handleClick = () => setClick(!click);
 
+  const closeMobileMenu = () => setClick(false);
+
   const showButton = () => {
     if (window.innerWidth <= 960) {
       setButton(false);
@@ -40,7 +42,7 @@ const Navbar = () => {
       <IconContext.Provider value={{ color: "#fff" }}>
         <Nav>
           <NavbarContainer>
-            <NavLogo to='/'>
+            <NavLogo to='/' onClick={closeMobileMenu}>
               <NavIcon />
               Cameron McCloskey
             </NavLogo>
@@ -52,7 +54,10 @@ const Navbar = () => {
                 <NavLinks to='/'>Home</NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to='/about'>About Me</NavLinks>
+                <NavLinks to='/about'>About</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to='/technologies'>Technologies</NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks to='/projects'>Projects</NavLinks>
