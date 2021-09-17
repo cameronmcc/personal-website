@@ -1,4 +1,5 @@
 export const homeObjOne = {
+  id: "home",
   lightBg: false,
   primary: true,
   imgStart: "",
@@ -12,6 +13,24 @@ export const homeObjOne = {
   img: require("../../images/svg3.svg").default,
   alt: "Image",
   start: "",
+};
+
+export const ObjTwo = {
+  id: "about",
+  lightBg: true,
+  primary: false,
+  imgStart: "start",
+  lightTopLine: false,
+  lightTextDesc: false,
+  buttonLabel: "See Projects",
+  description:
+    "Hi there. My name is Cameron and I'm a Full Stack Developer. I'm from California and I've been writing software for 2 years. I specialize in React utilizing the MERN stack, but have also used Python and Java. Feel free to check out some of my work below.",
+  headline: "",
+  lightText: false,
+  topLine: "About",
+  img: require("../../images/svg2.svg").default,
+  alt: "Image",
+  start: "true",
 };
 
 export const homeObjThree = {
@@ -36,11 +55,11 @@ export const homeObjFour = {
   imgStart: "",
   lightTopLine: true,
   lightTextDesc: true,
-  buttonLabel: "See Projects",
+  buttonLabel: "Contact",
   description: "Full Stack Engineer",
-  headline: "Welcome to my Personal Portfolio",
+  headline: "Ipsum lorem.",
   lightText: true,
-  topLine: "Cameron McCloskey",
+  topLine: "",
   img: require("../../images/svg4.svg").default,
   alt: "Image",
   start: "",

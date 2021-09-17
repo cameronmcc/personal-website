@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { DiCssdeck } from "react-icons/di";
-import { Link } from "react-router-dom";
+import { Link as LinkR } from "react-router-dom";
+import { Link as LinkS } from "react-scroll";
 import { Container } from "../../globalStyles";
 
 export const Nav = styled.nav`
@@ -23,7 +24,7 @@ export const NavbarContainer = styled(Container)`
   ${Container}
 `;
 
-export const NavLogo = styled(Link)`
+export const NavLogo = styled(LinkR)`
   color: #fff;
   justify-self: flex-start;
   cursor: pointer;
@@ -88,7 +89,7 @@ export const NavItem = styled.li`
   }
 `;
 
-export const NavLinks = styled(Link)`
+export const NavLinks = styled(LinkS)`
   color: white;
   display: flex;
   align-items: center;
@@ -106,6 +107,10 @@ export const NavLinks = styled(Link)`
       color: #4b59f7;
       transition: all 0.3s ease;
     }
+
+    &.active {
+      border-bottom: 3px solid #4b59f7;
+    }
   }
 `;
 
@@ -119,7 +124,7 @@ export const NavItemBtn = styled.li`
   }
 `;
 
-export const NavBtnLink = styled(Link)`
+export const NavBtnLink = styled(LinkR)`
   display: flex;
   justify-content: center;
   align-items: center;

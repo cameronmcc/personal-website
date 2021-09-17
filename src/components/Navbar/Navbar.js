@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import { Button } from "../../globalStyles";
+import { Link as LinkS } from "react-scroll";
+import { Link as LinkR } from "react-router-dom";
 import {
   Nav,
   NavbarContainer,
@@ -13,9 +15,22 @@ import {
   NavLinks,
   NavItemBtn,
   NavBtnLink,
-} from "./Navbar.elements";
+} from "./NavbarElements";
 
-const Navbar = () => {
+const Navbar = ({ isOpen, toggle }) => {
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+  }, []);
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -40,8 +55,8 @@ const Navbar = () => {
   return (
     <>
       <IconContext.Provider value={{ color: "#fff" }}>
-        <Nav>
-          <NavbarContainer>
+        <Nav scrollNav={scrollNav}>
+          <NavbarContainer isOpen={isOpen} onClick={toggle}>
             <NavLogo to='/' onClick={closeMobileMenu}>
               <NavIcon />
               Cameron McCloskey
@@ -51,19 +66,45 @@ const Navbar = () => {
             </MobileIcon>
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
-                <NavLinks to='/'>Home</NavLinks>
+                <NavLinks
+                  to='/'
+                  onClick={toggle}
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact='true'
+                  offset={-80}
+                >
+                  Home
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to='/about'>About</NavLinks>
+                <NavLinks
+                  to='/about'
+                  onClick={toggle}
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact='true'
+                  offset={-80}
+                >
+                  About
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to='/technologies'>Technologies</NavLinks>
+                <NavLinks to='/technologies' onClick={toggle}>
+                  Technologies
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to='/projects'>Projects</NavLinks>
+                <NavLinks to='/projects' onClick={toggle}>
+                  Projects
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to='/music'>Music</NavLinks>
+                <NavLinks to='/Contact' onClick={toggle}>
+                  Contact
+                </NavLinks>
               </NavItem>
               <NavItemBtn>
                 {button ? (
