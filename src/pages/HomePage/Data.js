@@ -22,7 +22,7 @@ export const ObjTwo = {
   imgStart: "start",
   lightTopLine: false,
   lightTextDesc: false,
-  buttonLabel: "See Projects",
+  buttonLabel: "Technologies I use",
   description:
     "Hi there. My name is Cameron and I'm a Full Stack Developer. I'm from California and I've been writing software for 2 years. I specialize in React utilizing the MERN stack, but have also used Python and Java. Feel free to check out some of my work below.",
   headline: "",
@@ -34,16 +34,17 @@ export const ObjTwo = {
 };
 
 export const homeObjThree = {
+  id: "technologies",
   lightBg: false,
   primary: true,
   imgStart: "",
   lightTopLine: true,
   lightTextDesc: true,
   buttonLabel: "See Projects",
-  description: "Full Stack Engineer",
-  headline: "Welcome to my Personal Portfolio",
+  description: "",
+  headline: "",
   lightText: true,
-  topLine: "Cameron McCloskey",
+  topLine: "Technologies",
   img: require("../../images/svg1.svg").default,
   alt: "Image",
   start: "",

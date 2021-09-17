@@ -4,6 +4,7 @@ import { IconContext } from "react-icons/lib";
 import { Button } from "../../globalStyles";
 import { Link as LinkS } from "react-scroll";
 import { Link as LinkR } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 import {
   Nav,
   NavbarContainer,
@@ -67,43 +68,49 @@ const Navbar = ({ isOpen, toggle }) => {
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
                 <NavLinks
-                  to='/'
+                  to='home'
                   onClick={toggle}
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact='true'
                   offset={-80}
+                  activeClass='active'
                 >
                   Home
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks
-                  to='/about'
+                  to='about'
                   onClick={toggle}
                   smooth={true}
                   duration={500}
                   spy={true}
                   exact='true'
                   offset={-80}
+                  activeClass='active'
                 >
                   About
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to='/technologies' onClick={toggle}>
+                <NavLinks
+                  to='technologies'
+                  onClick={toggle}
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  exact='true'
+                  offset={-80}
+                  activeClass='active'
+                >
                   Technologies
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks to='/projects' onClick={toggle}>
                   Projects
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks to='/Contact' onClick={toggle}>
-                  Contact
                 </NavLinks>
               </NavItem>
               <NavItemBtn>

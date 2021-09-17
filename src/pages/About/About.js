@@ -1,5 +1,5 @@
 import React from "react";
-import { ObjTwo } from "./Data";
+import { ObjTwo } from "../HomePage/Data";
 import { InfoSection } from "../../components";
 
 const About = () => {

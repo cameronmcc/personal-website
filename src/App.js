@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <GlobalStyle />
-      {/* <ScrollToTop /> */}
+      <ScrollToTop />
       <Navbar />
       <Home />
       <Footer />
